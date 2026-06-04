@@ -1,0 +1,319 @@
+/* ============================================================
+   BOHEME AESTHETICS — Components
+   Buttons, cards, service tiles, product grid, forms
+   ============================================================ */
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: var(--r-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-dark {
+  background: var(--charcoal);
+  color: var(--cream);
+  border-color: var(--charcoal);
+}
+.btn-dark:hover {
+  background: var(--charcoal-2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 44, 44, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+}
+.btn-outline:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.btn-sage {
+  background: var(--sage);
+  color: var(--cream);
+  border-color: var(--sage);
+}
+.btn-sage:hover {
+  background: var(--sage-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline-sage {
+  background: transparent;
+  color: var(--sage);
+  border-color: var(--sage);
+}
+.btn-outline-sage:hover {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Service Cards ────────────────────────────────────────── */
+.service-card {
+  background: var(--cream-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--rose-light);
+  box-shadow: 0 12px 40px rgba(196, 149, 106, 0.1);
+}
+
+.service-duration-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.service-duration { color: var(--sage); }
+.service-price {
+  font-family: var(--font-head);
+  font-size: 1.75rem;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+.service-name {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  color: var(--charcoal);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.service-tagline {
+  font-style: italic;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  color: var(--gray-1);
+}
+
+.service-desc {
+  font-size: 0.875rem;
+  color: var(--gray-1);
+  line-height: 1.8;
+}
+
+/* ── Product Grid ─────────────────────────────────────────── */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-img {
+  aspect-ratio: 1;
+  background: var(--cream-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition);
+}
+
+.product-img:hover { border-color: var(--rose-light); }
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img img { transform: scale(1.04); }
+
+.product-brand {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.product-name {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+
+.product-price {
+  font-size: 0.875rem;
+  color: var(--gray-1);
+}
+
+/* ── Testimonial ──────────────────────────────────────────── */
+.testimonial {
+  background: var(--cream-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 2.5rem;
+}
+
+.testimonial-stars {
+  color: var(--rose);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sage-dim);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--sage);
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+.testimonial-role { font-size: 0.75rem; color: var(--gray-2); }
+
+/* ── Credential items ─────────────────────────────────────── */
+.credential-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.credential-item:last-child { border-bottom: none; }
+
+.credential-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rose);
+  flex-shrink: 0;
+  margin-top: 0.45em;
+}
+
+.credential-text { font-size: 0.875rem; color: var(--charcoal-2); line-height: 1.5; }
+
+/* ── Image with parallax wrapper ──────────────────────────── */
+.parallax-wrap {
+  overflow: hidden;
+  border-radius: var(--r-lg);
+}
+
+.parallax-img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  transform: translateY(-10%);
+  will-change: transform;
+}
+
+/* ── Divider line ─────────────────────────────────────────── */
+.line-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+.line-divider--short {
+  width: 3rem;
+  background: var(--rose);
+  height: 1px;
+  margin: 1.25rem 0;
+}
+
+/* ── Footer grid background ───────────────────────────────── */
+.footer-grid-bg {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+}
+
+/* ── Category filter pills ────────────────────────────────── */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-pill {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-1);
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: var(--r-full);
+  cursor: pointer;
+  background: none;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.filter-pill.active,
+.filter-pill:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+  border-color: var(--charcoal);
+}
